@@ -6,6 +6,7 @@ The values in the script will need changing if:
   A different sensor is placed on the servos that has a different height (change "radius"),
   The source position is changed relative to the sensor (change "distance"),
   The Iris data capture rate is changed from the tested 1 capture per 10s (change "dataPointsPerRotation").
+Ensure nescassary modules are installed (os, glob, math, csv).
 
 On RaspberryPi ensure I2C is enabled in "raspi-config".
 Ensure Pi hat is powered through the external powersupply.
