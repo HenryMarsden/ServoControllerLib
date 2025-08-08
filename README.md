@@ -11,7 +11,8 @@ The values in the script will need changing if:
   The Iris data capture rate is changed from the tested 1 capture per 10s (change "dataPointsPerRotation").
 Ensure nescassary modules are installed (os, glob, math, csv).
 
-To run complete test, set up Iris and press "Run" on the TestScript.py file inside the Thonny editor on the Pi then press start on Iris. it is currently set up to capture 6 data points (1 every 10s) and then move, if this is changed update the values as needed inside Iris and inside TestScript.py. Ensure the value inside the sleep in TestScript.py is a multiple of the value of data capture in Iris (- 0.5 to account for servo move time). The DataConverterScript.py would also needed to be changed to reflect this change by adjusting the "dataPointsPerRotation" variable to be equal to the number of data points that are to be captured between servo movements.
+To run a complete test: 
+  set up Iris, then press "Run" on the TestScript.py file inside the Thonny editor on the Pi, then press start on Iris within 5 seconds. It is currently set up to capture 6 data points (1 every 10s) between servo movements, if this is changed update the values as required inside Iris and inside TestScript.py. Ensure the value inside the sleep in TestScript.py is a multiple of the value of data capture in Iris (- 0.5 to account for servo move time). The DataConverterScript.py would also needed to be changed to reflect this change by adjusting the "dataPointsPerRotation" variable to be equal to the number of data points that are to be captured between servo movements.
 
 On RaspberryPi ensure I2C is enabled in "raspi-config".
 Ensure Pi hat is powered through the external powersupply.
