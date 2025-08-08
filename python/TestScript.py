@@ -13,7 +13,7 @@ class TestScript:
     for i in range(6, rang + 2, incr):
       self.pwm.stutterRotation(0, i)
       print(self.calcDropOff())
-      time.sleep(60) # Change value for time between rotations, ensure it is a multiple of the Iris data capture time window
+      time.sleep(59.5) # Change value for time between rotations, ensure it is a multiple of the Iris data capture time window
 
   def calibrate(self):
     self.pwm.calibrate()
