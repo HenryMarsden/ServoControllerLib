@@ -104,12 +104,12 @@ class PCA9685:
   
   def calibrate(self):
     self.stutterRotation(1, 90)
-    self.stutterRotation(0, 0)
+    self.stutterRotation(0, 6)
     time.sleep(0.5)
     self.setRotationAngle(1, 90)
-    self.setRotationAngle(0, 0)
+    self.setRotationAngle(0, 6)
     self.pan = 90
-    self.tilt = 0
+    self.tilt = 6
     
   def adjustAngle(self, channel, Angle):
     if channel == 0:
