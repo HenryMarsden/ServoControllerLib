@@ -20,7 +20,7 @@ class TestScript:
 
   def calcDropOff(self):
     radius = 2.85
-    distance 9.75
+    distance = 9.75
     return self.pwm.calcInvSqu(distance, radius)
 
 # calibrate between and before every test. Uncomment lines as needed.
