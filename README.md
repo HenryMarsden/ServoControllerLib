@@ -1,5 +1,5 @@
 Python document contains code to be placed on raspberry pi.
-The time.sleep(x) value will need chaning in the script if the time between intervals of movement need changing.
+The time.sleep(x) value will need changing in the script if the time between intervals of movement need changing.
 
 DataConverterScript is to be placed in the same directory as the Iris output .csv files. 
 The values in the script will need changing if:
