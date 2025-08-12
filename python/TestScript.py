@@ -17,7 +17,7 @@ class TestScript:
   def pan(self, rang, incr):
     self.calibrate()
     for i in range(6, rang + 2, incr):
-      self.pwm.stutterRotation(0, i)
+      self.pwm.stutterRotation(1, i)
       time.sleep(59.5) # Change value for time between rotations, ensure it is a multiple of the Iris data capture time window
 
   def calibrate(self):
