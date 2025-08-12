@@ -15,7 +15,7 @@ When using the **TestScript.py** class, if it is required to switch between cali
 The `time.sleep(x)` value will need changing inside **TestScript.py** if the time between intervals of movement need changing. **_Ensure the value for `time.sleep(x)` is a multiple of the sample rate inside Iris minus 0.5_**  
 
 ## Data Converter Script notes
-The **DataConverterScript.py** find the newest .csv file inside its current directory, detects the Iris detection type, and normalizes the values retrieved from the detector by Iris based on the distance traveled by the rotating servo. The output of this will be put in a file called **output - [filename].csv**.  
+The **DataConverterScript.py** find the newest .csv file inside its current directory, detects the Iris detection type, and normalizes and averages the values retrieved from the detector, by Iris, by angle - based on the distance traveled by the rotating servo. The output of this will be put in a file called **output - [filename].csv**.  
 
 To use this, **DataConverterScript.py** must be placed in the same directory as the Iris output .csv files. When the script has generated a file, said generated file must be removed from the directory, or Iris must capture more data, before the script should be used again (because the script saves needing inputs by automatically working on the newest .csv file inside its directory).  
 **_Because of this time saving technique, it is reccomended that between each Iris run, the DataConverterScript.py be run_**  
@@ -28,7 +28,13 @@ Ensure nescassary modules are installed (os, glob, math, csv).
 
 
 ## How to run a complete test: 
-set up Iris, then press "Run" on the TestScript.py file inside the Thonny editor on the Pi, then press start on Iris within 5 seconds. It is currently set up to capture 6 data points (1 every 10s) between servo movements, if this is changed update the values as required inside Iris and inside TestScript.py. Ensure the value inside the sleep in TestScript.py is a multiple of the value of data capture in Iris (- 0.5 to account for servo move time). The DataConverterScript.py would also needed to be changed to reflect this change by adjusting the "dataPointsPerRotation" variable to be equal to the number of data points that are to be captured between servo movements.
+
+* Set up Iris
+* Ensure the PiHat is connected to the servos and the Pi, and that it is powered
+* Open **TestScript.py** inside the Thonny editor on the Pi and press **Run**
+* Press start on Iris within 5 seconds.  
+
+It is currently set up to capture 6 data points (1 every 10s) between servo movements, if this is changed update the values as required inside Iris and inside TestScript.py. Ensure the value inside the sleep in TestScript.py is a multiple of the value of data capture in Iris (- 0.5 to account for servo move time). The DataConverterScript.py would also needed to be changed to reflect this change by adjusting the "dataPointsPerRotation" variable to be equal to the number of data points that are to be captured between servo movements.
 
 ## Pi setup (if Pi needs to be reset)
 * Ensure I2C is enabled in "raspi-config".   
